@@ -2,4 +2,4 @@
 docker rm databasecontainer -f
 docker rmi database:latest
 docker build -t database:latest .
-docker run --name databasecontainer -p 27017:27017 --network host -e MONGO-INITDB-DATABASE=maindatabase database
+eval "docker run --name databasecontainer -p 27017:27017 --network host -e MONGO-INITDB-DATABASE=maindatabase database"
