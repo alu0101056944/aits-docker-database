@@ -5,4 +5,5 @@ docker build -t dbtest .
 docker run \
     --name dbtestinstance \
     -e MONGO_INITDB_DATABASE=mymongodatabase \
+    --network host
     dbtest
