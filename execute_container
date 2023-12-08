@@ -1,0 +1,3 @@
+#! /bin/bash
+docker build -t database:latest .
+docker run --name databasecontainer -p8083:27017 -e MONGO-INITDB-DATABASE=maindatabase database:latest
